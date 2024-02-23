@@ -2,6 +2,8 @@
 
 ## Purpose: render XML files more readible
 
+### Introduction:
+
 Lengty HTML and XML documents with many embedded elements can be very difficult to read.
 
 Via the XML DOM model, all elements and attributes can be translated into Nodes and subsequently be queried.
@@ -18,6 +20,14 @@ The present simplification includes:
 * the closing tag for an element is suppressed and replaced by out-dentation (just as in Python)
 * the structure within an attribute is remained intact: XML does not consider this part of the DOM structure, but simply as content
 
+### Usage:
+
+'''
+myxml = {...str content of an XML document...}
+
+print(xml2pml(myxml))
+'''
+
 The function requires the following input:
 * [required] a complete or partial content-blob from a well-formed XML document
 * [optional] in following sequence:
@@ -26,7 +36,7 @@ The function requires the following input:
   * element tag indicator, can be set to empty string '' {default = '§.'}
   * attribute tag indicator, can be set to empty string '' {default = '@.'} 
 
-_Notes:_
+__Notes:__
 * The '§.' element tag indicator and the '@.' attribute tag indicator are set as default, since these would allow to reverse engineer the original XML structure
 * When concise readibilty is the only objective: The element tag indicator or the attribute tag indicator can be set to empty (''). Also the indentation string can be set to less spaces.
 * Recommendation: do not use '<' or '>' characters as element tag indicator or attribute tag indicator, the <pml>...</pml> blob can even be included into the original XML file.
