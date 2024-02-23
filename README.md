@@ -41,7 +41,7 @@ The function requires the following input:
 <u>Notes:</u>
 * The ```§.``` element tag indicator and the ```@.``` attribute tag indicator are set as default, since these would allow to reverse engineer the original XML structure
 * When concise readibilty is the only objective: The element tag indicator or the attribute tag indicator can be set to empty (''). Also the indentation string can be set to less spaces.
-* Recommendation: do not use ```<``` or ```>``` characters as element tag indicator or attribute tag indicator, the <pml>...</pml> blob can then even be included into a XML file.
+* Recommendation: do not use ```'<'``` or ```'>'``` characters as element tag indicator or attribute tag indicator, the ```'<pml>...</pml>'``` blob can then even be included into a XML file.
 
 ### Example of use:
 
