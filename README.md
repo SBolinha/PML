@@ -34,9 +34,9 @@ The function requires the following input:
 * [required] a complete or partial content-blob from a well-formed XML document
 * [optional] in following sequence:
 * * indentation {default = 0}
-  * indentation string {default = '    '}
-  * element tag indicator, can be set to empty string '' {default = '§.'}
-  * attribute tag indicator, can be set to empty string '' {default = '@.'} 
+  * indentation string {default = ```'    '```}
+  * element tag indicator, can be set to empty string ```''``` {default = '§.'}
+  * attribute tag indicator, can be set to empty string ```''``` {default = '@.'} 
 
 <u>Notes:</u>
 * The ```§.``` element tag indicator and the ```@.``` attribute tag indicator are set as default, since these would allow to reverse engineer the original XML structure
@@ -51,7 +51,7 @@ myxml = {...str content of an XML document...}
 print(xml2pml(myxml))
 ```
 
-### Further examples:
+### Examples:
 
 #### 1. Snippet of an XML file:
 ```
