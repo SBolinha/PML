@@ -27,7 +27,8 @@ xml2pml(<required: XML content>,
         [optional: default indentation],
         [optional: indentation string],
         [optional: element tag indicator],
-        [optiontal: attribute tag indicator])
+        [optional: attribute tag indicator],
+        [optional: KeepCR set to True])
 ```
 
 The function requires the following input:
@@ -36,7 +37,8 @@ The function requires the following input:
 * * indentation {default = 0}
   * indentation string {default = ```'    '```}
   * element tag indicator, can be set to empty string ```''``` {default = '§.'}
-  * attribute tag indicator, can be set to empty string ```''``` {default = '@.'} 
+  * attribute tag indicator, can be set to empty string ```''``` {default = '@.'}
+  * KeepCR boolean, can be set to ```'True'``` to copy the source <CR> (the ```'\n'``` operator) to the PML {default = ```False```}
 
 <u>Notes:</u>
 * The ```§.``` element tag indicator and the ```@.``` attribute tag indicator are set as default, since these would allow to reverse engineer the original XML structure
