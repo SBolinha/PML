@@ -1,4 +1,4 @@
-def xml2pml(xml, otll=0, tab='    ', tag='§.', att='@.'):
+def xml2pml(xml, otll=0, tab='    ', tag='§.', att='@.', KeepCR=False):
     pml = ''
 #    otll = 2 # outer tag level
     itll = 0 # inner tag level
@@ -61,7 +61,7 @@ def xml2pml(xml, otll=0, tab='    ', tag='§.', att='@.'):
                 if tlln>0:
                     pml += '\n' + tab*otll         
                     tlln = 0
-                if l == '\n':
+                if l == '\n' and KeepCR: # KeepLF: copy the source <CR> to pml, can lead to blank lines
                     pml += '\n' + tab*otll
                 else:
                     pml += l          
