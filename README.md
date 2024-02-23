@@ -102,7 +102,13 @@ Result of ```xml2pml``` on this snippet, using 4x indentation and otherwise defa
 
 Clearly difficult to interpret:
 ```
-myxml = """<parameter group="GROUP_CCF_TPMS_SYSTEM" name="PARAM_CCF_TPMS_TDWS" scope="base"><group_name><text><tm>Tire pressure monitoring</tm></text></group_name><param_name><text><tm>Tire pressure monitor system</tm></text></param_name><parameter_active><source name="AS_BUILT"><value option="TPMS"><text><tm id="@J_I_TPM_FITTED">Tire pressure monitor system is fitted.</tm></text><data formatted="Tire pressure monitor system is fitted." type="ENUM">0x01</data></value></source></parameter_active><parameter_mismatch/><parameter_not_available/></parameter>"""
+myxml = """<parameter group="GROUP_CCF_TPMS_SYSTEM" name="PARAM_CCF_TPMS_TDWS" scope="base"><group_name>
+<text><tm>Tire pressure monitoring</tm></text></group_name>
+<param_name><text><tm>Tire pressure monitor system</tm></text></param_name>
+<parameter_active><source name="AS_BUILT"><value option="TPMS">
+<text><tm id="@J_I_TPM_FITTED">Tire pressure monitor system is fitted.</tm></text>
+<data formatted="Tire pressure monitor system is fitted." type="ENUM">0x01</data>
+</value></source></parameter_active><parameter_mismatch/><parameter_not_available/></parameter>"""
 ```
 
 Calling XML2PML in Python:
