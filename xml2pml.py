@@ -1,4 +1,4 @@
-def xml2pml(xml, otll=0, tab='    ', tag='§.', att='@.', KeepCR=False):
+def xml2pml(xml, otll=0, tab='    ', tag='§.', att='@.', KeepCR=True):
     pml = ''
 #    otll = 2 # outer tag level
     itll = 0 # inner tag level
