@@ -38,7 +38,7 @@ The function requires the following input:
   * indentation string {default = ```'    '```}
   * element tag indicator, can be set to empty string ```''``` {default = '§.'}
   * attribute tag indicator, can be set to empty string ```''``` {default = '@.'}
-  * KeepCR boolean, can be set to ```'True'``` to copy the source <CR> (the ```'\n'``` operator) to the PML {default = ```False```}
+  * KeepCR boolean, can be set to ```'True'``` to copy the source ```<CR>``` carriage-returns (the ```'\n'``` operator) to the PML {default = ```False```}
 
 <u>Notes:</u>
 * The ```§.``` element tag indicator and the ```@.``` attribute tag indicator are set as default, since these would allow to reverse engineer the original XML structure
