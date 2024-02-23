@@ -113,7 +113,7 @@ myxml = """<parameter group="GROUP_CCF_TPMS_SYSTEM" name="PARAM_CCF_TPMS_TDWS" s
 
 Calling XML2PML in Python:
 ```
-mypml = xml2pml(myxml, 0, '', '') # to minimise the output
+mypml = xml2pml(myxml, 0, '  ', '', '') # to minimise the output
 print(mypml)
 ```
 
@@ -121,30 +121,30 @@ Result:
 ```
 <pml>
 parameter
-    group="GROUP_CCF_TPMS_SYSTEM"
-    name="PARAM_CCF_TPMS_TDWS"
-    scope="base"
-    group_name
+  group="GROUP_CCF_TPMS_SYSTEM"
+  name="PARAM_CCF_TPMS_TDWS"
+  scope="base"
+  group_name
+    text
+      tm
+        Tire pressure monitoring
+  param_name
+    text
+      tm
+        Tire pressure monitor system
+  parameter_active
+    source
+      name="AS_BUILT"
+      value
+        option="TPMS"
         text
-            tm
-                Tire pressure monitoring
-    param_name
-        text
-            tm
-                Tire pressure monitor system
-    parameter_active
-        source
-            name="AS_BUILT"
-            value
-                option="TPMS"
-                text
-                    tm
-                        id="@J_I_TPM_FITTED"
-                        Tire pressure monitor system is fitted.
-                data
-                    formatted="Tire pressure monitor system is fitted."
-                    type="ENUM"
-                    0x01
-    parameter_mismatch
-    parameter_not_available</pml>
+          tm
+            id="@J_I_TPM_FITTED"
+            Tire pressure monitor system is fitted.
+        data
+          formatted="Tire pressure monitor system is fitted."
+          type="ENUM"
+          0x01
+  parameter_mismatch
+  parameter_not_available</pml>
 ```
