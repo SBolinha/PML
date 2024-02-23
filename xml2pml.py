@@ -1,6 +1,9 @@
 def xml2pml(xml, otll=0, tab='    ', tag='§.', att='@.', KeepCR=True):
-    pml = ''
-#    otll = 2 # outer tag level
+#   otll = 0 # outer tag level
+#   tab = '    ' # default basis for tabulation
+#   tag = '§.' # default element tag indicator
+#   att = '@.' # default attribute tag indicator
+#   KeepCR = True # by default transfer <CR> from the source XML
     itll = 0 # inner tag level
     atln = -1 # attribute length
     tlln = 0 # tag label length
@@ -8,8 +11,7 @@ def xml2pml(xml, otll=0, tab='    ', tag='§.', att='@.', KeepCR=True):
     squot = False
     dquot = False
 
-    pml += '\n' + tab*otll          
-    pml += "<pml>"
+    pml = tab*otll          
     for l in xml:
         if l == '>':
             itll = 0
@@ -57,14 +59,19 @@ def xml2pml(xml, otll=0, tab='    ', tag='§.', att='@.', KeepCR=True):
                     pml += l          
                 else:
                     pass # nothing to be done for a closing tag
-            else:
-                if tlln>0:
-                    pml += '\n' + tab*otll         
+            else: # outside an element
+                if tlln>0: # coming just out of an element
+                    if nclt:
+                        pml += '\n' + tab*otll         
                     tlln = 0
-                if l == '\n' and KeepCR: # KeepCR: copy the source <CR> to pml, can lead to blank lines
+                if l == '\n':
                     pml += '\n' + tab*otll
                 else:
-                    pml += l          
-
-    pml += "</pml>"
-    return pml
+                    pml += l
+    tmp = ''
+    if KeepCR == False:
+        for line in pml.split('\n'):
+            if len(''.join(line.split()))>0: # only keep lines with text content
+                tmp += line + '\n'
+        pml=tmp
+    return '<pml>' + pml + '</pml>'
