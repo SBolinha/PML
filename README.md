@@ -36,8 +36,8 @@ The function requires the following input:
 * [optional] in following sequence:
 * * indentation {default = 0}
   * indentation string {default = ```'    '```}
-  * element tag indicator, can be set to empty string ```''``` {default = '§.'}
-  * attribute tag indicator, can be set to empty string ```''``` {default = '@.'}
+  * element tag indicator, can be set to empty string ```''``` {default = ```'§.'```}
+  * attribute tag indicator, can be set to empty string ```''``` {default = ```'@.'```}
   * KeepCR boolean, can be set to ```'True'``` to copy the source ```<CR>``` carriage-returns (the ```'\n'``` operator) to the PML {default = ```False```}
 
 <u>Notes:</u>
