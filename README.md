@@ -60,13 +60,19 @@ id="main" cover='I like this'>Hello<b>bold</b>text<br/><table test='tryout:"true
  that<css namespace="unknown test:'true value=110'" onclick="do this"/><h1 value=3>Heading</h1>test</p>end
 ```
 
-In python:
+Source content in Python:
 ```
 myxml = 'start<p \nid="main" cover=' + "'I like this'" + '>Hello<b>bold</b>text<br/><table test=' + "'tryout:" + \
     '"true in value, index=300"' + "'" + '/>do\n that<css namespace="unknown test:' + "'true value=110'" + '" onclick="do this"/><h1 value=3>Heading</h1>test</p>end'
 ```
 
-Result of ```xml2pml``` on this snippet, using default PML settings:
+Calling XML2PML in Python:
+```
+mypml = xml2pml(myxml, 4)
+print(mypml)
+```
+
+Result of ```xml2pml``` on this snippet, using 4x indentation and otherwise default PML settings:
 
 ```
                 <pml>start
