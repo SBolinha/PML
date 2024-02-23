@@ -22,11 +22,13 @@ The present simplification includes:
 
 ### Usage:
 
-'''
-myxml = {...str content of an XML document...}
-
-print(xml2pml(myxml))
-'''
+```
+xml2pml(<required: XML content>,
+        [optional: default indentation],
+        [optional: indentation string],
+        [optional: element tag indicator],
+        [optiontal: attribute tag indicator])
+```
 
 The function requires the following input:
 * [required] a complete or partial content-blob from a well-formed XML document
@@ -36,8 +38,16 @@ The function requires the following input:
   * element tag indicator, can be set to empty string '' {default = '§.'}
   * attribute tag indicator, can be set to empty string '' {default = '@.'} 
 
-__Notes:__
+<u>Notes:</u>
 * The '§.' element tag indicator and the '@.' attribute tag indicator are set as default, since these would allow to reverse engineer the original XML structure
 * When concise readibilty is the only objective: The element tag indicator or the attribute tag indicator can be set to empty (''). Also the indentation string can be set to less spaces.
 * Recommendation: do not use '<' or '>' characters as element tag indicator or attribute tag indicator, the <pml>...</pml> blob can even be included into the original XML file.
+
+### Example of use:
+
+```
+myxml = {...str content of an XML document...}
+
+print(xml2pml(myxml))
+```
 
