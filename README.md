@@ -1,5 +1,6 @@
-# PML
-PML - Python Markup Language: render XML files more readible
+# PML - Python Markup Language
+
+## Purpose: render XML files more readible
 
 Lengty HTML and XML documents with many embedded elements can be very difficult to read.
 
