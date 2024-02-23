@@ -26,7 +26,7 @@ The function requires the following input:
   * element tag indicator, can be set to empty string '' {default = '§.'}
   * attribute tag indicator, can be set to empty string '' {default = '@.'} 
 
-[Notes:]
+_Notes:_
 * The '§.' element tag indicator and the '@.' attribute tag indicator are set as default, since these would allow to reverse engineer the original XML structure
 * When concise readibilty is the only objective: The element tag indicator or the attribute tag indicator can be set to empty (''). Also the indentation string can be set to less spaces.
 * Recommendation: do not use '<' or '>' characters as element tag indicator or attribute tag indicator, the <pml>...</pml> blob can even be included into the original XML file.
