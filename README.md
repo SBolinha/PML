@@ -15,7 +15,17 @@ This makes the underlying structure clearer and easier to interpret.
 Following the Python language example, it is set out here to simplify the display of structured and well-formed XML documents.
 In particular for well-formed XML documents, the display can be simplified by removing unnecessary delimiters.
 
-The present simplification includes:
+### What does it do?
+
+#### The XML content is processed as follows:
+* strip all XML formatting from the elements
+* remove all closing tags, these are implicit
+* print every XML element on a new line, proceeded by an element tag indicator (default ```'§.'```)
+* print every attribute of an XML document indented on a new line, proceeded by an attribute tag indicator (default ```'@.'```)
+* print all text content within an element indented on a new line
+* keep original format for ```'<[CDATA[]]>'``` and ```'<?xml namespace="..">'``` type of elements
+
+#### The present simplification includes:
 * nodes and subnodes and their attributes are presented by means of indentation
 * the closing tag for an element is suppressed and replaced by out-dentation (just as in Python)
 * the structure within an attribute is remained intact: XML does not consider this part of the DOM structure, but simply as content
