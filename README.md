@@ -23,7 +23,7 @@ In particular for well-formed XML documents, the display can be simplified by re
 * print every XML element on a new line, proceeded by an element tag indicator (default ```'§.'```)
 * print every attribute of an XML document indented on a new line, proceeded by an attribute tag indicator (default ```'@.'```)
 * print all text content within an element indented on a new line
-* keep original format for ```'<[CDATA[]]>'``` and ```'<?xml namespace="..">'``` type of elements
+* keep original format for ```'<![CDATA[]]>'``` and ```'<?xml namespace="..">'``` type of elements
 
 #### The present simplification includes:
 * nodes and subnodes and their attributes are presented by means of indentation
